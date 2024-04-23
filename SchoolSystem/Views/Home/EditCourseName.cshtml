@@ -1,0 +1,31 @@
+﻿@model SchoolSystem.Models.Course
+
+<h1>Update Course Name</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditCourseName" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label>Choose course to update:</label>
+                        <select asp-for="CourseId" asp-items="@ViewBag.CourseList">
+                            <option value="">Choose course in list</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>New name for Course:</label>
+                        <input asp-for="CourseName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Update course</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿<h1>All Students Taking The Course Programming 1</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Student Name</th>
+            <th>Teacher Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.StudentsProgramming1List != null)
+        {
+            var studentsList = ViewBag.StudentsProgramming1List; 
+
+            foreach (var item in studentsList)
+            {
+                <tr>
+                    <td>@item.CourseName</td>
+                    <td>@item.StudentName</td>
+                    <td>@item.TeacherName</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3">No data available</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

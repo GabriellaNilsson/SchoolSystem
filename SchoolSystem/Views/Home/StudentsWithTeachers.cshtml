@@ -1,0 +1,22 @@
+﻿
+<h1>All Students With Their Teachers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Teacher Name</th>
+        </tr>
+    </thead>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.StudentName</td>
+                <td>@item.TeacherName</td>
+            </tr>
+        }
+    }
+</table>
+
